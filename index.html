@@ -32,43 +32,74 @@ footer{padding:30px 22px 80px;text-align:center;color:var(--muted);font-size:14p
 <footer>feito com amor para minha princesa</footer>
 
 <button id="musicToggle" class="music-toggle" type="button">🔊 Música ligada</button>
-<iframe id="youtubeAudio" class="youtube-audio" src="https://www.youtube.com/embed/hodnntAN-Z4?enablejsapi=1&autoplay=1&mute=0&controls=0&loop=1&playlist=hodnntAN-Z4&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
+<audio id="audioPlayer" style="display:none;">
+  <source src="https://youtu.be/hodnntAN-Z4" type="audio/mpeg">
+</audio>
 </main>
 <script>
 const musicToggle = document.getElementById('musicToggle');
+let isMusicPlaying = true;
+
+// Carregar YouTube IFrame API
+const tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+document.body.appendChild(tag);
+
 let player;
 
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player('youtubeAudio', {
+  player = new YT.Player(document.createElement('div'), {
+    height: '0',
+    width: '0',
+    videoId: 'hodnntAN-Z4',
     events: {
-      onReady: function (event) {
-        event.target.setVolume(50);
-        event.target.playVideo();
-      }
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    },
+    playerVars: {
+      'autoplay': 1,
+      'controls': 0,
+      'loop': 1,
+      'playlist': 'hodnntAN-Z4'
     }
   });
+  
+  // Adicionar ao body
+  document.body.appendChild(player.getIframe());
+  player.getIframe().style.display = 'none';
+}
+
+function onPlayerReady(event) {
+  event.target.setVolume(50);
+  event.target.playVideo();
+  isMusicPlaying = true;
+  musicToggle.textContent = '🔊 Música ligada';
+}
+
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING) {
+    isMusicPlaying = true;
+    musicToggle.textContent = '🔊 Música ligada';
+  }
 }
 
 function toggleMusic() {
   if (!player) return;
 
-  if (player.isMuted()) {
-    player.unMute();
-    player.setVolume(50);
-    musicToggle.textContent = '🔊 Música ligada';
-  } else {
-    player.mute();
+  if (isMusicPlaying) {
+    player.pauseVideo();
     musicToggle.textContent = '🔇 Música';
+    isMusicPlaying = false;
+  } else {
+    player.playVideo();
+    musicToggle.textContent = '🔊 Música ligada';
+    isMusicPlaying = true;
   }
 }
 
 if (musicToggle) {
   musicToggle.addEventListener('click', toggleMusic);
 }
-
-const youtubeApi = document.createElement('script');
-youtubeApi.src = 'https://www.youtube.com/iframe_api';
-document.body.appendChild(youtubeApi);
 
 function saveLetter() {
   const title = document.getElementById('letterTitle').value;
