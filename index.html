@@ -5,25 +5,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Para você, meu amor ♡</title>
 <style>
-:root{color-scheme:light dark;--bg:light-dark(#fff4f7,#170f16);--surface:light-dark(#ffffffdf,#241722e8);--text:light-dark(#3a1823,#fff0f7);--muted:light-dark(#7b4f60,#d7b9c9);--accent:light-dark(#d92345,#ff79ad);--accent2:light-dark(#f7a8bc,#7c3458);--border:light-dark(#efb8c7,#4b2c3d)}
+:root{color-scheme:light dark;--bg:light-dark(#fff4f7,#170f16);--surface:light-dark(#ffffffdf,#241722e8);--text:light-dark(#3a1823,#fff0f7);--muted:light-dark(#7b4f60,#d7b9c9);--accent:light-dark(#d94f86,#ff8bb4);--accent-2:light-dark(#f7b9cc,#f6c6d9);--border:light-dark(#f1dfe7,#5d3a4d)}
 *{box-sizing:border-box}body{margin:0;font-family:'Trebuchet MS',Arial,sans-serif;background:var(--bg);color:var(--text)}
-#app{min-height:100vh;background:var(--bg);overflow:hidden}.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:70px 22px;position:relative}.glow{position:absolute;width:360px;height:360px;border-radius:50%;background:var(--accent);opacity:.13;filter:blur(40px);top:12%;left:50%;transform:translateX(-50%)}
-.content{position:relative;max-width:760px}.tiny{letter-spacing:.22em;text-transform:uppercase;font:600 12px system-ui,sans-serif;color:var(--accent)}h1{font-size:clamp(48px,9vw,94px);line-height:.95;margin:18px 0;color:var(--text);font-weight:500}h1 span{color:var(--accent)}.subtitle{font-size:20px;line-height:1.7;color:var(--muted);max-width:590px;margin:0 auto 30px}.heart{font-size:38px;animation:pulse 1.7s infinite}@keyframes pulse{50%{transform:scale(1.12)}}
-.btn{border:0;border-radius:999px;background:var(--accent);color:white;padding:14px 23px;font-weight:700;cursor:pointer;box-shadow:0 12px 30px #d94f8630;font-size:15px}.btn:hover{transform:translateY(-2px)}
-section{padding:70px 22px}.wrap{max-width:980px;margin:auto}.section-title{text-align:center;font-size:34px;font-weight:500;margin:0 0 12px}.section-sub{text-align:center;color:var(--muted);margin:0 auto 36px;font:15px system-ui,sans-serif}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:28px;backdrop-filter:blur(10px);transition:.25s}.card:hover{transform:translateY(-5px)}.icon{font-size:30px}.card h3{font-size:22px;margin:15px 0 9px}.card p{font:15px/1.7 system-ui,sans-serif;color:var(--muted);margin:0}
-.letter{max-width:720px;margin:auto;background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:40px clamp(24px,6vw,62px);box-shadow:0 25px 70px #9e416520}.letter p{font-size:19px;line-height:1.85;margin:0 0 18px}.signature{text-align:right;color:var(--accent);font-size:25px;margin-top:30px}.counter{text-align:center;padding:40px 20px}.counter strong{display:block;font-size:44px;color:var(--accent);margin:10px}.counter span{font:13px system-ui,sans-serif;color:var(--muted)}footer{text-align:center;padding:35px;color:var(--muted);font:13px system-ui,sans-serif;border-top:1px solid var(--border)}
-@media(max-width:700px){.cards{grid-template-columns:1fr}.hero{min-height:82vh}.subtitle{font-size:17px}section{padding:55px 18px}}
-.writebox{max-width:720px;margin:28px auto 0;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:24px}.writebox input,.writebox textarea{width:100%;border:1px solid var(--border);border-radius:14px;padding:13px;margin-bottom:12px;background:transparent;color:var(--text);font:15px system-ui,sans-serif}.writebox textarea{min-height:140px;resize:vertical}.saved{margin-top:22px;display:grid;gap:12px}.saved article{padding:18px;border:1px solid var(--border);border-radius:18px}.saved h4{margin:0 0 7px;font-size:19px}.saved p{margin:0;color:var(--muted);white-space:pre-wrap;font:14px/1.6 system-ui,sans-serif}
+#app{min-height:100vh;background:var(--bg);overflow:hidden}.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:70px 22px;position:relative}.glow{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,#ffc2d8 0%,rgba(255,194,216,.42) 28%,rgba(255,194,216,0) 70%);filter:blur(20px);opacity:.9}.heart{font-size:clamp(42px,8vw,96px);line-height:1;color:var(--accent);margin-bottom:8px;animation:beat 1.8s ease-in-out infinite}.subtitle{font-size:clamp(20px,3vw,30px);max-width:760px;margin:0 auto;color:var(--text);font-weight:600}.content{position:relative;max-width:760px}.tiny{letter-spacing:.22em;text-transform:uppercase;font:600 12px system-ui,sans-serif;color:var(--accent)}h1{font-size:clamp(48px,9vw,94px);line-height:.92;margin:12px 0 18px;font-weight:700}.btn{border:0;border-radius:999px;background:var(--accent);color:white;padding:14px 23px;font-weight:700;cursor:pointer;box-shadow:0 12px 30px #d94f8630;font-size:15px;transition:transform .2s ease,opacity .2s ease}.btn:hover{transform:translateY(-2px)}.btn.secondary{background:transparent;border:1px solid var(--border);color:var(--text);box-shadow:none}.buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+section{padding:70px 22px}.wrap{max-width:980px;margin:auto}.section-title{text-align:center;font-size:34px;font-weight:500;margin:0 0 12px}.section-sub{text-align:center;color:var(--muted);margin:0 auto 26px;max-width:700px;line-height:1.7}.cards{display:grid;grid-template-columns:repeat(3,minmax(220px,1fr));gap:18px;margin-top:32px}.card{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:24px;text-align:center;box-shadow:0 18px 40px rgba(145,62,93,.08)}.icon{font-size:34px;margin-bottom:10px}.card h3{margin:0 0 10px;font-size:22px}.card p{margin:0;color:var(--muted);line-height:1.7}
+.letter{max-width:720px;margin:auto;background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:40px clamp(24px,6vw,62px);box-shadow:0 25px 70px #9e416520}.letter p{font-size:clamp(17px,2vw,23px);line-height:1.9;margin:12px 0;color:var(--text)}.letter p:first-of-type{margin-top:20px}
+.writebox{max-width:720px;margin:28px auto 0;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:24px}.writebox input,.writebox textarea{width:100%;border:1px solid var(--border);background:rgba(255,255,255,.42);border-radius:12px;padding:12px 14px;font:inherit;color:var(--text);margin-bottom:14px}.writebox textarea{min-height:140px;resize:vertical}.writebox button{width:100%}.saved-letters{max-width:980px;margin:24px auto 0;display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:18px}.saved-letters article{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:18px 16px}.saved-letters h4{margin:0 0 10px;font-size:20px}.saved-letters p{margin:0 0 10px;white-space:pre-wrap;color:var(--text);line-height:1.7}.saved-letters small{color:var(--muted)}
+.counter{margin:36px auto 0;max-width:720px;text-align:center}.counter strong{display:block;font-size:clamp(44px,9vw,110px);line-height:.9;color:var(--accent)}.counter span{font-size:18px;color:var(--muted)}
+footer{padding:30px 22px 80px;text-align:center;color:var(--muted);font-size:14px}
+.music-toggle{position:fixed;right:20px;bottom:20px;z-index:50;border:0;border-radius:999px;background:var(--accent);color:#fff;padding:12px 18px;font-weight:700;cursor:pointer;box-shadow:0 12px 30px rgba(217,79,134,0.28);font-size:14px}.music-toggle:hover{transform:translateY(-2px)}
+.youtube-audio{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;left:-9999px;top:-9999px;border:0}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@media(max-width:700px){.cards{grid-template-columns:1fr}.hero{min-height:82vh}.subtitle{font-size:17px}section{padding:55px 18px}.saved-letters{grid-template-columns:1fr}.music-toggle{right:16px;bottom:16px;padding:10px 14px}} 
 </style></head>
 <body><main id="app">
-<header class="hero"><div class="glow"></div><div class="content"><div class="heart">♡</div><div class="tiny">VITÓRIA & TAMIRES · desde 04/06</div><p class="subtitle">Aqui podemos nos expressar com palavras e sentimentos. — Então, tudo que sentirmos e não conseguirmos dizer, podemos escrever.</p><button class="btn" onclick="document.getElementById('carta').scrollIntoView({behavior:'smooth'})">Ler minha carta ♡</button></div></header>
-<section><div class="wrap"><h2 class="section-title">Nosso lugar</h2><p class="section-sub">As cores que lembram uma à outra.</p><div class="cards"><article class="card"><div class="icon">❤️</div><p>quero viver tudo que há de bom nesse mundo, com você. saiba que, o Flamengo sempre estará conosco.</p></article><article class="card"><div class="icon">🌷</div><p>sempre se lembre de que eu estou aqui pra você e por você. sou COMPLETAMENTE apaixonada pela sua pessoa.</p></article><article class="card"><div class="icon">🫶</div><h3>04 de junho</h3><p>agora nunca mais eu esqueço nosso dia.</p></article></div></div></section>
-<section id="carta"><div class="letter"><div class="tiny">uma carta para você</div><p>Minha Vitória,</p><p>Mesmo sendo um amor vivido à distância, você conseguiu fazer parte dos meus dias de um jeito tão bonito que parece que existe um pedacinho seu comigo o tempo todo.</p><p>Desde 04 de junho, a palavra "nós" ganhou um significado ainda mais especial. Quero continuar conhecendo cada pedacinho seu, colecionando momentos e construindo, com calma, a nossa história.</p><p>Que este cantinho seja só o começo de tudo que ainda vamos guardar juntas.</p><div class="signature">com amor, Tamires ♡</div></div></section>
-<section><div class="wrap"><h2 class="section-title">Nossas cartas 💌</h2><p class="section-sub">Um cantinho para escrever palavras que vocês podem guardar.</p><div class="writebox"><input id="letterTitle" placeholder="Título da carta"><textarea id="letterText" placeholder="Escreva aqui..."></textarea><button class="btn" onclick="saveLetter()">Guardar carta ♡</button><div id="savedLetters" class="saved"></div></div></div></section>
+<header class="hero"><div class="glow"></div><div class="content"><div class="heart">♡</div><div class="tiny">VITÓRIA & TAMIRES · desde 04/06</div><p class="subtitle">Aqui podemos nos expressar sem medo, sem pressa e com tudo que o coração sente.</p><div class="buttons"><a href="#carta" class="btn">Ler a carta</a><button class="btn secondary" type="button" onclick="document.getElementById('letterTitle').focus()">Escrever mensagem</button></div></div></header>
+
+<section><div class="wrap"><h2 class="section-title">Nosso lugar</h2><p class="section-sub">As cores que lembram uma à outra, os detalhes que fazem sentido só quando estamos juntas, e os momentos que ficam no coração para sempre.</p><div class="cards"><article class="card"><div class="icon">❤️</div><h3>Carinho</h3><p>Um amor que cresce em pequenos gestos, em palavras gentis e em presença mesmo à distância.</p></article><article class="card"><div class="icon">🌷</div><h3>Flores</h3><p>Como uma primavera que nunca para, trazendo beleza, delicadeza e lembranças que florescem todos os dias.</p></article><article class="card"><div class="icon">✨</div><h3>Futuro</h3><p>Há muita coisa linda pela frente: risadas, planos, sorrisos e um caminho que escolhemos juntas.</p></article></div></div></section>
+
+<section id="carta"><div class="letter"><div class="tiny">uma carta para você</div><p>Minha Vitória,</p><p>Mesmo sendo um amor vivido à distância, você conseguiu fazer parte dos meus dias de um jeito tão intenso, tão leve e tão verdadeiro. Você entrou na minha vida como uma paz, como um sorriso inesperado, como a certeza de que algumas pessoas têm um lugar especial no coração mesmo antes de serem totalmente conhecidas.</p><p>Eu amo a forma como você me toca, como você me faz rir, como você torna tudo mais bonito só por estar presente. E mesmo com o tempo, com a distância, com os desafios, eu sinto que o que a gente tem é real, profundo e cheio de futuro.</p><p>Você é meu refúgio, meu afeto, minha vontade de continuar. E eu quero que a gente viva tudo isso com calma, com ternura, com alegria e com a certeza de que, juntas, somos mais fortes e mais felizes.</p><p>Te amo muito, meu amor. Sempre.</p></div></section>
+
+<section><div class="wrap"><h2 class="section-title">Nossas cartas 💌</h2><p class="section-sub">Um cantinho para escrever palavras que vocês podem guardar.</p><div class="writebox"><input id="letterTitle" type="text" placeholder="Título da mensagem" maxlength="60"><textarea id="letterText" placeholder="Escreva algo bonito..."></textarea><button class="btn" type="button" onclick="saveLetter()">Salvar mensagem</button></div><div id="savedLetters" class="saved-letters"></div></div></section>
+
 <div class="counter"><div class="tiny">e ainda tem muito pela frente</div><strong>∞</strong><span>momentos para viver juntas</span></div>
+
 <footer>feito com amor para minha princesa</footer>
+
+<button id="musicToggle" class="music-toggle" type="button">🔇 Música</button>
+<iframe id="youtubeAudio" class="youtube-audio" src="https://www.youtube.com/embed/hodnntAN-Z4?enablejsapi=1&autoplay=1&mute=1&controls=0&loop=1&playlist=hodnntAN-Z4&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media"></iframe>
 </main>
 <script>
+const musicToggle = document.getElementById('musicToggle');
+let player;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('youtubeAudio', {
+    events: {
+      onReady: function (event) {
+        event.target.mute();
+        event.target.playVideo();
+      }
+    }
+  });
+}
+
+function toggleMusic() {
+  if (!player) return;
+
+  if (player.isMuted()) {
+    player.unMute();
+    player.setVolume(50);
+    musicToggle.textContent = '🔊 Música ligada';
+  } else {
+    player.mute();
+    musicToggle.textContent = '🔇 Música';
+  }
+}
+
+if (musicToggle) {
+  musicToggle.addEventListener('click', toggleMusic);
+}
+
+const youtubeApi = document.createElement('script');
+youtubeApi.src = 'https://www.youtube.com/iframe_api';
+document.body.appendChild(youtubeApi);
+
 function saveLetter() {
   const title = document.getElementById('letterTitle').value;
   const text = document.getElementById('letterText').value;
