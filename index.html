@@ -12,16 +12,22 @@ section{padding:70px 22px}.wrap{max-width:980px;margin:auto}.section-title{text-
 .card-photo{position:relative;width:100%;height:240px;border-radius:16px;overflow:hidden;background:#f8dfe8;border:1px solid var(--border);margin-bottom:14px}.card-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .5s ease-in-out;image-rendering:crisp-edges;-webkit-backface-visibility:hidden;backface-visibility:hidden}.card-photo img.active{opacity:1}.card-photo .dot-row{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);display:flex;gap:7px;z-index:10}.card-photo .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.6);box-shadow:0 2px 4px rgba(0,0,0,.2);cursor:pointer;transition:all .2s ease}.card-photo .dot.active{background:#fff;transform:scale(1.15);box-shadow:0 2px 6px rgba(0,0,0,.3)}.letter{max-width:720px;margin:auto;background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:40px clamp(24px,6vw,62px);box-shadow:0 25px 70px #9e416520}.letter p{font-size:clamp(17px,2vw,23px);line-height:1.9;margin:12px 0;color:var(--text)}.letter p:first-of-type{margin-top:20px}
 .writebox{max-width:720px;margin:28px auto 0;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:24px}.writebox input,.writebox textarea{width:100%;border:1px solid var(--border);background:rgba(255,255,255,.42);border-radius:12px;padding:12px 14px;font:inherit;color:var(--text);margin-bottom:14px}.writebox textarea{min-height:140px;resize:vertical}.writebox button{width:100%}.saved-letters{max-width:980px;margin:24px auto 0;display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:18px}.saved-letters article{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:18px 16px}.saved-letters h4{margin:0 0 10px;font-size:20px}.saved-letters p{margin:0 0 10px;white-space:pre-wrap;color:var(--text);line-height:1.7}.saved-letters small{color:var(--muted)}
 .counter{margin:36px auto 0;max-width:720px;text-align:center}.counter strong{display:block;font-size:clamp(44px,9vw,110px);line-height:.9;color:var(--accent)}.counter span{font-size:18px;color:var(--muted)}
+.music-card{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:220px}.music-icon{font-size:36px;margin-bottom:8px}.music-button{margin-top:12px;border:0;background:var(--accent);color:#fff;padding:12px 18px;border-radius:999px;font-weight:700;cursor:pointer;box-shadow:0 12px 28px rgba(217,79,134,.22)}
+.music-modal{position:fixed;inset:0;background:rgba(25,11,17,.58);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:all .2s ease;z-index:100}
+.music-modal.open{opacity:1;visibility:visible}
+.music-modal-content{width:min(560px,100%);max-height:80vh;padding:30px 24px 18px;border-radius:24px;background:var(--surface);border:1px solid var(--border);box-shadow:0 30px 80px rgba(58,24,35,.28);overflow:auto}
+.music-modal-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.music-modal-header h3{margin:0;font-size:clamp(22px,4vw,30px)}.close-modal{border:0;background:transparent;color:var(--text);font-size:28px;cursor:pointer;line-height:1;padding:0}
+.music-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}.music-list li{padding:12px 14px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.18);text-align:left;color:var(--text);font-size:16px;line-height:1.5}
 footer{padding:30px 22px 80px;text-align:center;color:var(--muted);font-size:14px}
 .music-toggle{position:fixed;right:20px;bottom:20px;z-index:50;border:0;border-radius:999px;background:var(--accent);color:#fff;padding:12px 18px;font-weight:700;cursor:pointer;box-shadow:0 12px 30px rgba(217,79,134,0.28);font-size:14px}.music-toggle:hover{transform:translateY(-2px)}
 .youtube-audio{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;left:-9999px;top:-9999px;border:0}
 @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
-@media(max-width:700px){.cards{grid-template-columns:1fr}.hero{min-height:82vh}.subtitle{font-size:17px;line-height:1.5}.buttons{gap:10px;margin-top:16px}.buttons + .subtitle{margin-top:18px}section{padding:55px 18px}.saved-letters{grid-template-columns:1fr}.music-toggle{right:16px;bottom:16px;padding:10px 14px}.card-photo{height:280px;margin-bottom:16px}.card-photo .dot-row{bottom:14px;gap:8px}.card-photo .dot{width:12px;height:12px}.card h3{font-size:24px}} 
+@media(max-width:700px){.cards{grid-template-columns:1fr}.hero{min-height:82vh}.subtitle{font-size:17px;line-height:1.5}.buttons{gap:10px;margin-top:16px}.buttons + .subtitle{margin-top:18px}section{padding:55px 18px}.saved-letters{grid-template-columns:1fr}.music-toggle{right:16px;bottom:16px;padding:10px 14px}.card-photo{height:280px;margin-bottom:16px}.card-photo .dot-row{bottom:14px;gap:8px}.card-photo .dot{width:12px;height:12px}.card h3{font-size:24px}.music-list li{font-size:15px}} 
 </style></head>
 <body><main id="app">
 <header class="hero"><div class="glow"></div><div class="content"><div class="heart">♡</div><div class="tiny">VITÓRIA & TAMIRES · desde 04/06</div><div class="buttons"><a href="#carta" class="btn">Ler a carta</a><button class="btn secondary" type="button" onclick="document.getElementById('letterTitle').focus()">Escrever mensagem</button></div></div></header>
 
-<section><div class="wrap"><h2 class="section-title">Nosso lugar</h2><p class="section-sub">Aqui podemos expressar nossos sentimentos com palavras.</p><div class="cards"><article class="card"><div class="card-photo" id="flowersSlide"><img class="active" src="https://media.discordapp.net/attachments/1554638360637603870/1554658160197902427/IMG_9281.jpg?backend=b2&ex=6abdafbd&is=6abc5e3d&hm=7de22abe4c1356855758e727f050727be03d1fee2f2c1da79ff5b3cc17221961&=&format=webp&width=512&height=512" alt="Foto 1" loading="lazy"><img src="https://cdn.discordapp.com/attachments/1554638360637603870/1554658161259188346/IMG_9280.jpg?backend=b2&ex=6abdafbd&is=6abc5e3d&hm=ed25b0cdc65588e879bd7d289e8b3350ebf007ee093b94402b7249d035e8be67&" alt="Foto 2" loading="lazy"><img src="https://cdn.discordapp.com/attachments/1554638360637603870/1554658161833672854/IMG_9279.jpg?backend=b2&ex=6abdafbd&is=6abc5e3d&hm=a5e82f9012443a787314de3e2465727f2bbd1b8ece65104d9789cccf419cec76&" alt="Foto 3" loading="lazy"><img src="https://cdn.discordapp.com/attachments/1554638360637603870/1554659577318866994/IMG_9284.jpg?backend=b2&ex=6abdb10f&is=6abc5f8f&hm=fc71d86cbe79f4294b8ad9caefbb722971a0a5883ad9f4df84fc7478c86cc579&" alt="Foto 4" loading="lazy"><img src="https://cdn.discordapp.com/attachments/1554638360637603870/1554659578229035078/IMG_9283.jpg?backend=b2&ex=6abdb10f&is=6abc5f8f&hm=1900a284b18afa0caba5edb9dbf5ba734aa65884d6db4fcc045804ddd0a773c9&" alt="Foto 5" loading="lazy"><img src="https://cdn.discordapp.com/attachments/1554638360637603870/1554659578996719706/IMG_9282.jpg?backend=b2&ex=6abdb10f&is=6abc5f8f&hm=a38cb9937c0112563c2934ab06624d2bf5fce902acb19cb8ca6b2198931d16ff&" alt="Foto 6" loading="lazy"><div class="dot-row"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></div><h3>nós <3</h3></article><article class="card"><div class="icon">⚠️</div><h3>atenção</h3><p>está permitido desabafos, declarações e até broncas, ok? pega leve.</p></article><article class="card"><div class="icon">✨</div><h3>Futuro</h3><p>Há muita coisa linda pela frente: risadas, planos, sorrisos e um caminho que escolhemos juntas.</p></article></div></div></section>
+<section><div class="wrap"><h2 class="section-title">Nosso lugar</h2><p class="section-sub">Aqui podemos expressar nossos sentimentos com palavras.</p><div class="cards"><article class="card"><div class="card-photo" id="flowersSlide"><img class="active" src="https://media.discordapp.net/attachments/1554638360637603870/1554658160197902427/IMG_9281.jpg?backend=b2&ex=6abdafbd&is=6abc5e3d&hm=7de22abe4c1356855758e727f050727be03d1fee2f2c1da79ff5b3cc17221961&=&format=webp&width=512&height=512" alt="Foto 1" loading="lazy"><img src="https://cdn.discordapp.com/attachments/1554638360637603870/1554658161259188346/IMG_9280.jpg?backend=b2&ex=6abdafbd&is=6abc5e3d&hm=ed25b0cdc65588e879bd7d289e8b3350ebf007ee093b94402b7249d035e8be67&" alt="Foto 2" loading="lazy"><img src="https://cdn.discordapp.com/attachments/1554638360637603870/1554658161833672854/IMG_9279.jpg?backend=b2&ex=6abdafbd&is=6abc5e3d&hm=a5e82f9012443a787314de3e2465727f2bbd1b8ece65104d9789cccf419cec76&" alt="Foto 3" loading="lazy"><img src="https://cdn.discordapp.com/attachments/1554638360637603870/1554659577318866994/IMG_9284.jpg?backend=b2&ex=6abdb10f&is=6abc5f8f&hm=fc71d86cbe79f4294b8ad9caefbb722971a0a5883ad9f4df84fc7478c86cc579&" alt="Foto 4" loading="lazy"><img src="https://cdn.discordapp.com/attachments/1554638360637603870/1554659578229035078/IMG_9283.jpg?backend=b2&ex=6abdb10f&is=6abc5f8f&hm=1900a284b18afa0caba5edb9dbf5ba734aa65884d6db4fcc045804ddd0a773c9&" alt="Foto 5" loading="lazy"><img src="https://cdn.discordapp.com/attachments/1554638360637603870/1554659578996719706/IMG_9282.jpg?backend=b2&ex=6abdb10f&is=6abc5f8f&hm=a38cb9937c0112563c2934ab06624d2bf5fce902acb19cb8ca6b2198931d16ff&" alt="Foto 6" loading="lazy"><div class="dot-row"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></div><h3>nós <3</h3></article><article class="card"><div class="icon">⚠️</div><h3>atenção</h3><p>está permitido desabafos, declarações e até broncas, ok? pega leve.</p></article><article class="card music-card"><div class="music-icon">🎵</div><h3>músicas que me lembram você</h3><button class="music-button" type="button" id="openMusicModal">abrir playlist</button></article></div></div></section>
 
 <section id="carta"><div class="letter"><div class="tiny">uma carta para você</div><p>Minha linda,</p><p>Vou deixar essa carta permanente pra você sempre se lembrar de que eu sou completamente apaixonada por você. Eu quero viver e realizar sonhos ao seu lado. Acho que você não tem ideia de que você me tem de um jeitinho só teu.</p><p>Obrigada por ter deixado eu te amar e te cuidar. Prometo te fazer sorrir todos os dias, com meu jeitinho bobo e atrapalhado. Eu amo te amar!</p><p>Saiba que, aos meus olhos, você é a mulher mais linda do mundo. Você é extremamente incrível, sua inteligência me cativa, eu te admiro demais.</p><p>Me perdoe pelos meus erros. Estou tentando me tornar uma pessoa melhor a cada dia, pra te amar da forma que você merece. Sua paciência está sendo essencial pra isso.</p><p>Pois bem, obrigada por me fazer feliz. Eu me sinto viva e amada por você. Eu te amo ❤️</p></div></section>
 
@@ -30,6 +36,29 @@ footer{padding:30px 22px 80px;text-align:center;color:var(--muted);font-size:14p
 <div class="counter"><div class="tiny">e ainda tem muito pela frente</div><strong>∞</strong><span>para viver juntas</span></div>
 
 <footer>feito com amor para minha princesa</footer>
+
+<div class="music-modal" id="musicModal" aria-hidden="true">
+  <div class="music-modal-content" role="dialog" aria-modal="true" aria-labelledby="musicTitle">
+    <div class="music-modal-header">
+      <h3 id="musicTitle">músicas que me lembram você</h3>
+      <button class="close-modal" type="button" id="closeMusicModal" aria-label="Fechar lista de músicas">×</button>
+    </div>
+    <ul class="music-list">
+      <li>1. A hora é agora - Jorge e Mateus</li>
+      <li>2. Foto - Marvilla</li>
+      <li>3. Nega - Luan Santana</li>
+      <li>4. Samba in paris - Baco</li>
+      <li>5. Vem cá - Pelé MilFlows</li>
+      <li>6. Mulher - Carol Biazin</li>
+      <li>7. AmareSó - Carol Biazin</li>
+      <li>8. Dengo - João Gomes</li>
+      <li>9. Ela é gostosa pra caralho - Baco</li>
+      <li>10. Lembrei de nós - João Gomes</li>
+      <li>11. Pra sempre com você - Jorge e Mateus</li>
+      <li>12. Jeito carinhoso - Bom gosto</li>
+    </ul>
+  </div>
+</div>
 
 <button id="musicToggle" class="music-toggle" type="button">🔊 Música ligada</button>
 <script>
@@ -110,6 +139,35 @@ setInterval(() => {
   flowersIndex = (flowersIndex + 1) % flowersSlideImages.length;
   renderFlowersSlide();
 }, 2000);
+
+const musicModal = document.getElementById('musicModal');
+const openMusicModalBtn = document.getElementById('openMusicModal');
+const closeMusicModalBtn = document.getElementById('closeMusicModal');
+
+function openMusicModal() {
+  musicModal.classList.add('open');
+  musicModal.setAttribute('aria-hidden', 'false');
+}
+
+function closeMusicModal() {
+  musicModal.classList.remove('open');
+  musicModal.setAttribute('aria-hidden', 'true');
+}
+
+openMusicModalBtn.addEventListener('click', openMusicModal);
+closeMusicModalBtn.addEventListener('click', closeMusicModal);
+
+musicModal.addEventListener('click', function (event) {
+  if (event.target === musicModal) {
+    closeMusicModal();
+  }
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape' && musicModal.classList.contains('open')) {
+    closeMusicModal();
+  }
+});
 
 function saveLetter() {
   const title = document.getElementById('letterTitle').value;
