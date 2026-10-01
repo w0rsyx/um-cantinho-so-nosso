@@ -68,12 +68,10 @@ footer{padding:30px 22px 80px;text-align:center;color:var(--muted);font-size:14p
 <button id="musicToggle" class="music-toggle" type="button">🔊 Música ligada</button>
 
 <script type="module">
-  // Import Firebase functions
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
   import { getFirestore, collection, addDoc, query, orderBy, getDocs } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
 
-  // Firebase configuration
   const firebaseConfig = {
     apiKey: "AIzaSyDzPF6wyeHfFvrJ-3ObJ8ZSaL3sTGy03OU",
     authDomain: "um-cantinho-so-nosso.firebaseapp.com",
@@ -84,12 +82,10 @@ footer{padding:30px 22px 80px;text-align:center;color:var(--muted);font-size:14p
     measurementId: "G-DT3VD6T9K1"
   };
 
-  // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
   const analytics = getAnalytics(app);
 
-  // Make functions global for HTML onclick
   window.saveLetter = async function() {
     const title = document.getElementById('letterTitle').value;
     const text = document.getElementById('letterText').value;
@@ -145,7 +141,6 @@ footer{padding:30px 22px 80px;text-align:center;color:var(--muted);font-size:14p
     }
   }
 
-  // Load letters on page load
   renderLetters();
 </script>
 
