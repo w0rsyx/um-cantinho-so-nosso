@@ -7,38 +7,32 @@
 <style>
 :root{color-scheme:light dark;--bg:light-dark(#fff4f7,#170f16);--surface:light-dark(#ffffffdf,#241722e8);--text:light-dark(#3a1823,#fff0f7);--muted:light-dark(#7b4f60,#d7b9c9);--accent:light-dark(#d946a6,#ec4899);--border:light-dark(#e5d4dd,#3d2a37)}
 *{box-sizing:border-box}body{margin:0;font-family:'Trebuchet MS',Arial,sans-serif;background:var(--bg);color:var(--text)}
-#app{min-height:100vh;background:var(--bg);overflow:hidden}.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:70px 22px;position:relative}.glow{position:absolute;width:300px;height:300px;background:radial-gradient(circle,rgba(217,70,166,.15),transparent);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:beat 2s ease-in-out infinite}.content{position:relative;z-index:1}.heart{font-size:clamp(60px,12vw,140px);line-height:1;margin-bottom:12px;animation:beat 1.5s ease-in-out infinite}.tiny{font-size:12px;letter-spacing:2px;color:var(--muted);margin-bottom:20px;text-transform:uppercase}.title{font-size:clamp(32px,7vw,62px);line-height:1.1;margin:0 0 20px;font-weight:700}.subtitle{font-size:clamp(16px,4vw,20px);color:var(--muted);margin:0 0 40px;max-width:400px;line-height:1.5}.buttons{display:flex;gap:12px;margin-top:40px;justify-content:center;flex-wrap:wrap}a.btn{padding:12px 24px;border-radius:999px;border:2px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:600;transition:all .2s ease;cursor:pointer}a.btn:hover{background:var(--accent);color:white}a.btn.primary{background:var(--accent);color:white}a.btn.primary:hover{background:var(--accent);opacity:.9}
+#app{min-height:100vh;background:var(--bg);overflow:hidden}.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:70px 22px;position:relative}.glow{position:absolute;width:300px;height:300px;background:radial-gradient(circle,rgba(217,70,166,.15),transparent);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:beat 2s ease-in-out infinite}.content{position:relative;z-index:1}.heart{font-size:clamp(60px,12vw,140px);line-height:1;margin-bottom:12px;animation:beat 1.5s ease-in-out infinite}.tiny{font-size:12px;letter-spacing:2px;color:var(--muted);margin-bottom:20px;text-transform:uppercase}
 section{padding:70px 22px}.wrap{max-width:980px;margin:auto}.section-title{text-align:center;font-size:34px;font-weight:500;margin:0 0 12px}.section-sub{text-align:center;color:var(--muted);margin:0 0 40px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px;transition:all .2s ease}.card:hover{transform:translateY(-4px);border-color:var(--accent)}.card h4{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
-.letter{max-width:720px;margin:0 auto;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:40px 30px;line-height:1.8}
-.letter .tiny{display:block;margin-bottom:20px}.letter p{margin:0 0 16px;color:var(--text)}
-.letter p:last-child{margin:0}
-.card-photo{position:relative;width:100%;height:240px;border-radius:16px;overflow:hidden;background:#f8dfe8;border:1px solid var(--border);margin-bottom:14px}.card-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s ease}.card-photo img.active{opacity:1}.card-photo .dot{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);border:1px solid white;cursor:pointer;transition:all .2s ease;z-index:10}.card-photo .dot.active{background:white;transform:translateX(-50%) scale(1.2)}
-.writebox{max-width:720px;margin:28px auto 0;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:24px}.writebox input,.writebox textarea{width:100%;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.1);padding:12px 16px;color:var(--text);font-family:inherit;font-size:14px;margin-bottom:12px;transition:all .2s ease}.writebox input:focus,.writebox textarea:focus{outline:0;border-color:var(--accent);background:rgba(255,255,255,.15)}.writebox textarea{resize:vertical;min-height:100px}.writebox button{width:100%;padding:12px 24px;border:0;background:var(--accent);color:white;border-radius:12px;font-weight:600;cursor:pointer;transition:all .2s ease}.writebox button:hover{opacity:.9;transform:translateY(-2px)}
-.saved-letters{max-width:720px;margin:28px auto 0;display:grid;gap:16px}#savedLetters article{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px;transition:all .2s ease}#savedLetters article:hover{border-color:var(--accent)}#savedLetters article h4{margin:0 0 8px;color:var(--accent);font-size:16px}#savedLetters article p{margin:0 0 12px;color:var(--text);font-size:14px;line-height:1.6}#savedLetters article small{color:var(--muted);font-size:12px}
-.counter{margin:36px auto 0;max-width:720px;text-align:center}.counter strong{display:block;font-size:clamp(44px,9vw,110px);line-height:.9;color:var(--accent)}.counter span{font-size:18px;color:var(--muted)}
-.music-card{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:220px}.music-icon{font-size:36px;margin-bottom:8px}.music-button{margin-top:12px;border:0;background:var(--accent);color:white;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;transition:all .2s ease}.music-button:hover{opacity:.9}
-.music-modal{position:fixed;inset:0;background:rgba(25,11,17,.58);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:all .2s ease;z-index:1000}
-.music-modal.open{opacity:1;visibility:visible}
-.music-modal-content{width:min(560px,100%);max-height:80vh;padding:30px 24px 18px;border-radius:24px;background:var(--surface);border:1px solid var(--border);box-shadow:0 30px 80px rgba(58,24,35,.4);overflow-y:auto}
-.music-modal-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.music-modal-header h3{margin:0;font-size:clamp(22px,4vw,30px)}.close-modal{border:0;background:0;font-size:28px;cursor:pointer;color:var(--text);padding:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center;transition:color .2s ease}.close-modal:hover{color:var(--accent)}
-.music-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}.music-list li{padding:12px 14px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.18);text-align:left;font-size:14px;transition:all .2s ease}.music-list li:hover{background:rgba(255,255,255,.25);border-color:var(--accent)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px;transition:all .2s ease}.card:hover{transform:translateY(-4px);border-color:var(--accent)}.card h4{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}.card-photo{position:relative;width:100%;height:240px;border-radius:16px;overflow:hidden;background:#f8dfe8;border:1px solid var(--border);margin-bottom:14px}.card-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s ease}.card-photo img.active{opacity:1}.card-photo .dot{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);border:1px solid white;cursor:pointer;transition:all .2s ease;z-index:10}.card-photo .dot.active{background:white;transform:translateX(-50%) scale(1.2)}
+.letter{max-width:720px;margin:auto;background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:40px clamp(24px,6vw,62px);box-shadow:0 25px 70px #9e416520}.letter p{font-size:15px;line-height:1.8;margin:0 0 20px}.letter p:last-child{margin:0}.letter .tiny{display:block;margin-bottom:20px}
+.writebox{max-width:720px;margin:28px auto 0;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:24px}.writebox input,.writebox textarea{width:100%;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.1);padding:12px 16px;color:var(--text);font-family:inherit;font-size:14px;margin-bottom:12px;transition:all .2s ease}.writebox input:focus,.writebox textarea:focus{outline:0;border-color:var(--accent);background:rgba(255,255,255,.15)}.writebox textarea{resize:vertical;min-height:100px}.writebox button{width:100%;padding:12px 24px;border:0;background:var(--accent);color:white;border-radius:12px;font-weight:600;cursor:pointer;transition:all .2s ease}.writebox button:hover{opacity:.9}
+.saved-letters{max-width:720px;margin:28px auto 0;display:grid;gap:16px}#savedLetters article{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px}#savedLetters article h4{margin:0 0 8px;color:var(--accent)}.counter{margin:36px auto 0;max-width:720px;text-align:center}.counter strong{display:block;font-size:clamp(44px,9vw,110px);line-height:.9;color:var(--accent)}.counter span{font-size:18px;color:var(--muted)}
 footer{padding:30px 22px 80px;text-align:center;color:var(--muted);font-size:14px}
 .music-toggle{position:fixed;right:20px;bottom:20px;z-index:50;border:0;border-radius:999px;background:var(--accent);color:#fff;padding:12px 18px;font-weight:700;cursor:pointer;box-shadow:0 12px 30px rgba(217,70,166,.4);transition:all .2s ease}.music-toggle:hover{transform:scale(1.05)}
 .youtube-audio{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;left:-9999px;top:-9999px;border:0}
+.music-modal{position:fixed;inset:0;background:rgba(25,11,17,.58);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:all .2s ease;z-index:1000}.music-modal.open{opacity:1;visibility:visible}
+.music-modal-content{width:min(560px,100%);max-height:80vh;padding:30px 24px 18px;border-radius:24px;background:var(--surface);border:1px solid var(--border);box-shadow:0 30px 80px rgba(58,24,35,.4);overflow-y:auto}
+.music-modal-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.music-modal-header h3{margin:0;font-size:clamp(22px,4vw,30px)}.close-modal{border:0;background:0;font-size:28px;cursor:pointer;color:var(--text);padding:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center;transition:color .2s ease}.close-modal:hover{color:var(--accent)}
+.music-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}.music-list li{padding:12px 14px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.18);text-align:left;font-size:14px}
 @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
-@media(max-width:700px){.cards{grid-template-columns:1fr}.hero{min-height:82vh}.subtitle{font-size:17px;line-height:1.5}.buttons{gap:10px;margin-top:16px}.buttons + .subtitle{margin-top:18px}section{padding:40px 22px}.section-title{font-size:26px}.section-sub{margin:0 0 24px}}
+@media(max-width:700px){.cards{grid-template-columns:1fr}.hero{min-height:82vh}section{padding:55px 18px}.saved-letters{grid-template-columns:1fr}.music-toggle{right:16px;bottom:16px}}
 </style></head>
 <body><main id="app">
-<header class="hero"><div class="glow"></div><div class="content"><div class="heart">♡</div><div class="tiny">VITÓRIA & TAMIRES · desde 04/06</div><div class="buttons"><a href="#carta" class="btn primary">Leia minha carta</a><a href="#cartas" class="btn">Nossas cartas</a><a id="openMusicModal" class="btn">🎵 Músicas</a></div></div></header>
+<header class="hero"><div class="glow"></div><div class="content"><div class="heart">♡</div><div class="tiny">VITÓRIA & TAMIRES · desde 04/06</div></div></header>
 
-<section><div class="wrap"><h2 class="section-title">Nosso lugar</h2><p class="section-sub">Aqui podemos expressar nossos sentimentos com palavras.</p><div class="cards"><article class="card"><div class="card-photo" id="flowersSlide"><img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500&h=300&fit=crop" alt="flores"><img src="https://images.unsplash.com/photo-1552944221-ac0e3e1b3d61?w=500&h=300&fit=crop" alt="flores"><img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500&h=300&fit=crop" alt="flores"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div><h4>Flores para você</h4><p>Cada flor representa um dia especial ao seu lado. 🌸</p></article><article class="card"><h4>Nosso relacionamento</h4><p>Começou em 04/06 e desde então tudo ficou mais lindo. Você é meu amor. 💕</p></article><article class="card"><h4>Você é tudo</h4><p>Minha vida, meu amor, minha razão de sorrir todos os dias. Te amo infinitamente. 🥺♡</p></article></div></div></section>
+<section><div class="wrap"><h2 class="section-title">Nosso lugar</h2><p class="section-sub">As cores que lembram uma à outra, os detalhes que fazem sentido só quando estamos juntas, e os momentos que valem a pena ser vividos.</p><div class="cards"><article class="card"><div class="card-photo" id="flowersSlide"><img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500&h=300&fit=crop" alt="nós"><img src="https://images.unsplash.com/photo-1552944221-ac0e3e1b3d61?w=500&h=300&fit=crop" alt="nós"><img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500&h=300&fit=crop" alt="nós"><img src="https://images.unsplash.com/photo-1552944221-ac0e3e1b3d61?w=500&h=300&fit=crop" alt="nós"><img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500&h=300&fit=crop" alt="nós"><img src="https://images.unsplash.com/photo-1552944221-ac0e3e1b3d61?w=500&h=300&fit=crop" alt="nós"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><h4>nós ❤️</h4></article><article class="card"><h4>Carinho</h4><p>Cada abraço significa tudo para mim. Você é meu refúgio seguro.</p></article><article class="card" onclick="openMusicModal()"><h4>Músicas que me lembram você 🎵</h4><p style="cursor:pointer;color:var(--accent)">Clique para abrir a lista →</p></article></div></div></section>
 
-<section id="carta"><div class="letter"><div class="tiny">uma carta para você</div><p>Minha linda,</p><p>Vou deixar essa carta permanente pra você sempre se lembrar de que eu sou completamente apaixonado por você. Você é a minha vida, você é o meu tudo, você é a razão de eu acordar todos os dias com um sorriso no rosto.</p><p>Não importa o que aconteça, eu vou estar aqui ao seu lado, pra te ouvir, pra te abraçar, pra te fazer sorrir quando tudo ficar cinzento. Você é a melhor coisa que me aconteceu nessa vida.</p><p>Te amo demais, você é meu amor eterno. 🖤</p></div></section>
+<section id="carta"><div class="letter"><div class="tiny">uma carta para você</div><p>Minha linda,</p><p>Vou deixar essa carta permanente pra você sempre se lembrar de que eu sou completamente apaixonada por você! Eu quero viver e realizar sonhos ao seu lado. Acho que você não tem ideia de que você me tem de um jeitinho só teu.</p><p>Obrigada por ter deixado eu te amar e te cuidar, prometo te fazer sorrir todos os dias, com meu jeitinho bobo e atrapalhado. Eu amo te amar!</p><p>Saiba que aos meus olhos, você é a mulher mais linda do mundo! Você é extremamente incrível, sua inteligência me cativa, eu te admiro demais.</p><p>Me perdoe pelos meus erros, estou tentando me tornar uma pessoa melhor a cada dia, pra te amar da forma que você merece, sua paciência está sendo essencial pra isso.</p><p>Pois bem, obrigada por me fazer feliz, eu me sinto viva e amada por você. Eu te amo ❤️</p></div></section>
 
-<section id="cartas"><div class="wrap"><h2 class="section-title">Nossas cartas 💌</h2><div class="writebox"><input id="letterTitle" type="text" placeholder="Título da mensagem" maxlength="60"><textarea id="letterText" placeholder="Escreva seu sentimento aqui..."></textarea><button onclick="saveLetter()">Enviar mensagem ♡</button></div><div class="saved-letters"><div id="savedLetters"></div></div></div></section>
+<section><div class="wrap"><h2 class="section-title">Nossas cartas 💌</h2><p class="section-sub">Um cantinho para escrever palavras que vocês podem guardar.</p><div class="writebox"><input id="letterTitle" type="text" placeholder="Título da mensagem" maxlength="60"><textarea id="letterText" placeholder="Escreva seu sentimento aqui..."></textarea><button onclick="saveLetter()">Enviar mensagem ♡</button></div><div class="saved-letters"><div id="savedLetters"></div></div></div></section>
 
-<div class="counter"><div class="tiny">e ainda tem muito pela frente</div><strong>∞</strong><span>para viver juntas</span></div>
+<div class="counter"><div class="tiny">e ainda tem muito pela frente</div><strong>∞</strong><span>momentos para viver juntas</span></div>
 
 <footer>feito com amor para minha princesa</footer>
 
@@ -66,134 +60,31 @@ footer{padding:30px 22px 80px;text-align:center;color:var(--muted);font-size:14p
 </div>
 
 <button id="musicToggle" class="music-toggle" type="button">🔊 Música ligada</button>
-
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
-  import { getFirestore, collection, addDoc, query, orderBy, getDocs } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyDzPF6wyeHfFvrJ-3ObJ8ZSaL3sTGy03OU",
-    authDomain: "um-cantinho-so-nosso.firebaseapp.com",
-    projectId: "um-cantinho-so-nosso",
-    storageBucket: "um-cantinho-so-nosso.firebasestorage.app",
-    messagingSenderId: "169703594379",
-    appId: "1:169703594379:web:e8f19fa26b569cf34f778e",
-    measurementId: "G-DT3VD6T9K1"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-  const analytics = getAnalytics(app);
-
-  window.saveLetter = async function() {
-    const title = document.getElementById('letterTitle').value;
-    const text = document.getElementById('letterText').value;
-    
-    if (!title || !text) {
-      alert('Preencha título e mensagem! ♡');
-      return;
-    }
-    
-    try {
-      await addDoc(collection(db, 'letters'), {
-        title: title,
-        text: text,
-        date: new Date().toLocaleDateString('pt-BR'),
-        timestamp: new Date()
-      });
-      
-      document.getElementById('letterTitle').value = '';
-      document.getElementById('letterText').value = '';
-      
-      renderLetters();
-      alert('Mensagem enviada com sucesso! ♡');
-    } catch (error) {
-      console.error('Erro ao salvar mensagem:', error);
-      alert('Erro ao enviar mensagem. Tente novamente.');
-    }
-  };
-
-  async function renderLetters() {
-    try {
-      const q = query(collection(db, 'letters'), orderBy('timestamp', 'desc'));
-      const querySnapshot = await getDocs(q);
-      const container = document.getElementById('savedLetters');
-      container.innerHTML = '';
-      
-      if (querySnapshot.empty) {
-        container.innerHTML = '<p style="text-align: center; color: var(--muted);">Nenhuma carta ainda. Seja a primeira! 💕</p>';
-        return;
-      }
-      
-      querySnapshot.forEach((doc) => {
-        const letter = doc.data();
-        const article = document.createElement('article');
-        article.innerHTML = `
-          <h4>${letter.title}</h4>
-          <p>${letter.text}</p>
-          <small>${letter.date}</small>
-        `;
-        container.appendChild(article);
-      });
-    } catch (error) {
-      console.error('Erro ao carregar mensagens:', error);
-    }
-  }
-
-  renderLetters();
-</script>
-
 <script>
 const musicToggle = document.getElementById('musicToggle');
 let player;
-let isMusicPlaying = true;
 
 function onYouTubeIframeAPIReady() {
-  player = new YT.Player('ytplayer', {
-    height: '0',
-    width: '0',
-    videoId: 'hodnntAN-Z4',
+  player = new YT.Player('youtubeAudio', {
     events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    },
-    playerVars: {
-      autoplay: 1,
-      controls: 0,
-      loop: 1,
-      playlist: 'hodnntAN-Z4',
-      rel: 0,
-      modestbranding: 1
+      onReady: function (event) {
+        event.target.setVolume(50);
+        event.target.playVideo();
+      }
     }
   });
-}
-
-function onPlayerReady(event) {
-  event.target.setVolume(30);
-  event.target.playVideo();
-  isMusicPlaying = true;
-  musicToggle.textContent = '🔊 Música ligada';
-}
-
-function onPlayerStateChange(event) {
-  if (event.data === YT.PlayerState.PLAYING) {
-    isMusicPlaying = true;
-    musicToggle.textContent = '🔊 Música ligada';
-  }
 }
 
 function toggleMusic() {
   if (!player) return;
 
-  if (isMusicPlaying) {
-    player.pauseVideo();
-    isMusicPlaying = false;
-    musicToggle.textContent = '🔇 Música';
-  } else {
-    player.playVideo();
-    isMusicPlaying = true;
+  if (player.isMuted()) {
+    player.unMute();
+    player.setVolume(50);
     musicToggle.textContent = '🔊 Música ligada';
+  } else {
+    player.mute();
+    musicToggle.textContent = '🔇 Música';
   }
 }
 
@@ -201,9 +92,73 @@ if (musicToggle) {
   musicToggle.addEventListener('click', toggleMusic);
 }
 
-const tag = document.createElement('script');
-tag.src = 'https://www.youtube.com/iframe_api';
-document.body.appendChild(tag);
+const youtubeApi = document.createElement('script');
+youtubeApi.src = 'https://www.youtube.com/iframe_api';
+document.body.appendChild(youtubeApi);
+
+function saveLetter() {
+  const title = document.getElementById('letterTitle').value;
+  const text = document.getElementById('letterText').value;
+  
+  if (!title || !text) {
+    alert('Preencha título e mensagem! ♡');
+    return;
+  }
+  
+  const letters = JSON.parse(localStorage.getItem('letters')) || [];
+  letters.push({ title, text, date: new Date().toLocaleDateString('pt-BR') });
+  localStorage.setItem('letters', JSON.stringify(letters));
+  
+  document.getElementById('letterTitle').value = '';
+  document.getElementById('letterText').value = '';
+  
+  renderLetters();
+}
+
+function renderLetters() {
+  const letters = JSON.parse(localStorage.getItem('letters')) || [];
+  const container = document.getElementById('savedLetters');
+  container.innerHTML = '';
+  
+  letters.forEach((letter, index) => {
+    const article = document.createElement('article');
+    article.innerHTML = `
+      <h4>${letter.title}</h4>
+      <p>${letter.text}</p>
+      <small style="color: var(--muted);">${letter.date}</small>
+    `;
+    container.appendChild(article);
+  });
+}
+
+renderLetters();
+
+const musicModal = document.getElementById('musicModal');
+const closeMusicModalBtn = document.getElementById('closeMusicModal');
+
+function openMusicModal() {
+  musicModal.classList.add('open');
+  musicModal.setAttribute('aria-hidden', 'false');
+}
+
+function closeMusicModal() {
+  musicModal.classList.remove('open');
+  musicModal.setAttribute('aria-hidden', 'true');
+}
+
+closeMusicModalBtn.addEventListener('click', closeMusicModal);
+
+musicModal.addEventListener('click', function (event) {
+  if (event.target === musicModal) {
+    closeMusicModal();
+  }
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape' && musicModal.classList.contains('open')) {
+    closeMusicModal();
+  }
+});
 
 const flowersSlideImages = Array.from(document.querySelectorAll('#flowersSlide img')).filter(img => img.src && img.src.trim() !== '');
 const flowersDots = Array.from(document.querySelectorAll('#flowersSlide .dot'));
@@ -223,36 +178,7 @@ setInterval(() => {
   renderFlowersSlide();
 }, 2000);
 
-const musicModal = document.getElementById('musicModal');
-const openMusicModalBtn = document.getElementById('openMusicModal');
-const closeMusicModalBtn = document.getElementById('closeMusicModal');
-
-function openMusicModal() {
-  musicModal.classList.add('open');
-  musicModal.setAttribute('aria-hidden', 'false');
-}
-
-function closeMusicModal() {
-  musicModal.classList.remove('open');
-  musicModal.setAttribute('aria-hidden', 'true');
-}
-
-openMusicModalBtn.addEventListener('click', openMusicModal);
-closeMusicModalBtn.addEventListener('click', closeMusicModal);
-
-musicModal.addEventListener('click', function (event) {
-  if (event.target === musicModal) {
-    closeMusicModal();
-  }
-});
-
-document.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape' && musicModal.classList.contains('open')) {
-    closeMusicModal();
-  }
-});
-
 renderFlowersSlide();
 </script>
-<div id="ytplayer" style="display:none;"></div>
+<iframe id="youtubeAudio" class="youtube-audio" src="https://www.youtube.com/embed/hodnntAN-Z4?enablejsapi=1&autoplay=1&mute=0&controls=0&loop=1&playlist=hodnntAN-Z4&rel=0&modestbranding=1&playsinline=1"></iframe>
 </body></html>
